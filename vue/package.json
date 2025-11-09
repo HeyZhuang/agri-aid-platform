@@ -1,0 +1,43 @@
+{
+  "name": "farmer-agriculture-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.0.2",
+    "axios": "^1.5.1",
+    "three": "^0.157.0",
+    "echarts": "^5.4.3",
+    "vue-echarts": "^6.6.1",
+    "gsap": "^3.12.2",
+    "aos": "^2.3.4",
+    "animate.css": "^4.1.1",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "element-plus": "^2.4.2",
+    "@element-plus/icons-vue": "^2.1.0",
+    "core-js": "^3.8.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "^3.3.4",
+    "tailwindcss": "^3.3.3",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.31",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/forms": "^0.5.6"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

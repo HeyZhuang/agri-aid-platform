@@ -1,0 +1,323 @@
+.manager-container {
+    background: linear-gradient(135deg, #f8f3e6 0%, #fef9f2 100%);
+    min-height: 100vh;
+}
+
+.manager-header {
+    display: flex;
+    background: linear-gradient(135deg, #c3272b 0%, #a8212a 100%);
+    height: 60px;
+    box-shadow: 0 4px 20px rgba(195, 39, 43, 0.15);
+    position: relative;
+    z-index: 1000;
+}
+
+.manager-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="10" cy="10" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="10" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="10" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="10" r="3" fill="rgba(255,255,255,0.1)"/></svg>') repeat-x;
+    opacity: 0.6;
+}
+
+.manager-header-left {
+    width: 220px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+}
+
+.manager-header-left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.manager-header-left img:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.manager-header-left .title {
+    flex: 1;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.manager-header-center {
+    flex: 1;
+    width: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.manager-header-right {
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1001;
+}
+
+.manager-header-right .avatar {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    color: #ccc;
+    cursor: default
+}
+
+.manager-header-right .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px
+}
+
+.manager-main {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    padding-top: 0;
+}
+
+.manager-main-left {
+    width: 220px;
+    min-height: calc(100vh - 75px);
+    background: linear-gradient(135deg, #789262 0%, #6b8056 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(120, 146, 98, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.manager-main-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c3272b, #f4d03f, #c3272b);
+}
+
+.manager-main-right {
+    flex: 1;
+    width: 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.manager-main-right .search {
+    padding: 20px;
+    background: linear-gradient(135deg, #fff 0%, #f8f3e6 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(195, 39, 43, 0.1);
+    margin-bottom: 15px;
+}
+
+.manager-main-right .operation {
+    margin-top: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff 0%, #f8f3e6 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(120, 146, 98, 0.1);
+}
+
+.manager-main-right .table {
+    margin-top: 15px;
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #fff 0%, #fefefe 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.manager-main-right .table .pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card {
+    padding: 30px;
+    background: linear-gradient(135deg, #fff 0%, #f8f3e6 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(195, 39, 43, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c3272b, #789262, #c3272b);
+}
+
+/* ElementUI */
+.el-menu {
+    width: 220px;
+    height: 100%;
+    background: transparent !important;
+    border: none !important;
+    margin-top: 10px;
+}
+
+.el-submenu__title {
+    color: #fff !important;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin: 4px 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.el-submenu__title:hover {
+    background: rgba(195, 39, 43, 0.8) !important;
+    border-left-color: #f4d03f;
+    transform: translateX(5px);
+}
+
+.el-menu-item {
+    color: #fff !important;
+    height: 46px !important;
+    line-height: 46px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    margin: 2px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-size: 14px;
+}
+
+.el-menu-item.is-active {
+    background: linear-gradient(135deg, #c3272b 0%, #a8212a 100%) !important;
+    color: #fff !important;
+    border-left-color: #f4d03f;
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(195, 39, 43, 0.4);
+}
+
+.el-menu--inline .el-menu-item {
+    padding-left: 55px !important;
+}
+
+.el-menu .is-active {
+    color: #fff !important;
+}
+
+.el-menu-item:not(.is-active):hover {
+    background: rgba(195, 39, 43, 0.6) !important;
+    border-left-color: #f4d03f;
+    transform: translateX(5px);
+}
+
+/*.el-menu-item:hover {*/
+/*    background-color: #5fb878 !important;*/
+/*}*/
+
+.el-submenu__icon-arrow {
+    margin-top: -5px;
+}
+
+.el-breadcrumb__inner {
+    color: #ccc !important;
+}
+
+.el-dropdown-menu {
+    margin-top: 20px !important;
+}
+
+.el-breadcrumb {
+    margin-left: 10px;
+}
+
+th.el-table__cell {
+    background-color: #f8f8f8 !important;
+    color: #666;
+}
+
+/* 表格宽度优化 - 确保充分利用页面空间 */
+.manager-main-right .table .el-table {
+    width: 100% !important;
+    min-width: 100% !important;
+}
+
+.manager-main-right .table .el-table__body-wrapper {
+    width: 100% !important;
+}
+
+.manager-main-right .table .el-table__header-wrapper {
+    width: 100% !important;
+}
+
+/* 确保表格容器充分利用空间 */
+.table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.el-table {
+    font-size: 14px;
+}
+
+/* 优化操作列的间距 */
+.el-table__body .el-button + .el-button {
+    margin-left: 8px;
+}
+
+/* 确保页面内容区域充分利用空间 */
+.manager-main-right {
+    min-width: 0;
+    flex-grow: 1;
+}
+
+/* 响应式表格 */
+@media (max-width: 1200px) {
+    .manager-main-left {
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .manager-main {
+        flex-direction: column;
+    }
+    
+    .manager-main-left {
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .manager-main-right {
+        width: 100%;
+    }
+}
