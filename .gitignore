@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+
+# 环境变量
+.env
+.env.local
+
+# 构建输出
+dist/
+build/
+
+# 其他常见
+.DS_Store
+Thumbs.db
